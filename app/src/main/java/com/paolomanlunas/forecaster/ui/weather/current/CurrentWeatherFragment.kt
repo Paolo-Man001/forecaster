@@ -7,6 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.paolomanlunas.forecaster.R
+import com.paolomanlunas.forecaster.data.WeatherApiService
+import kotlinx.android.synthetic.main.current_weather_fragment.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class CurrentWeatherFragment : Fragment() {
 
@@ -28,6 +33,15 @@ class CurrentWeatherFragment : Fragment() {
       super.onActivityCreated(savedInstanceState)
       viewModel = ViewModelProvider(this).get(CurrentWeatherViewModel::class.java)
       // TODO: Use the ViewModel
+
+
+      // DEMO ONLY
+      val apiService = WeatherApiService()
+      GlobalScope.launch(Dispatchers.Main) {
+         val currentWeatherResponse =
+            apiService.getCurrentWeather("London").await()
+         textView.text = currentWeatherResponse.currentWeatherEntry.toString()
+      }
    }
 
 }
