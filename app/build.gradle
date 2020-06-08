@@ -8,6 +8,12 @@ apply plugin: 'androidx.navigation.safeargs'
 android {
     compileSdkVersion 29
 
+    // ADD for OkHttp
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
+    }
+
     defaultConfig {
         applicationId "com.paolomanlunas.forecaster"
         minSdkVersion 21
