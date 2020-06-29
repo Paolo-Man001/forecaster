@@ -4,6 +4,7 @@ import android.provider.Settings.Global.getString
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.paolomanlunas.forecaster.R
 import com.paolomanlunas.forecaster.data.response.CurrentWeatherResponse
+import com.xwray.groupie.BuildConfig
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -13,6 +14,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 const val API_KEY = "76bea1f433a42ebbd7f8ca32a9336618"
+//const val API_KEY =
 // http://api.weatherstack.com/current?access_key=API_KEY&query=Wellington&language=en
 /*
 * http://api.weatherstack.com/current
