@@ -13,7 +13,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-//const val API_KEY = "76bea1f433a42ebbd7f8ca32a9336618"
 const val API_KEY = BuildConfig.WeatherApiKey
 // http://api.weatherstack.com/current?access_key=API_KEY&query=Wellington&language=en
 /*
