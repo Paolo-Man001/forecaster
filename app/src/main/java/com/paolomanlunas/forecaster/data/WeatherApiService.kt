@@ -1,6 +1,8 @@
 package com.paolomanlunas.forecaster.data
 
+import android.provider.Settings.Global.getString
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import com.paolomanlunas.forecaster.R
 import com.paolomanlunas.forecaster.data.response.CurrentWeatherResponse
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
@@ -10,9 +12,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-
 const val API_KEY = "76bea1f433a42ebbd7f8ca32a9336618"
-// http://api.weatherstack.com/current?access_key=76bea1f433a42ebbd7f8ca32a9336618&query=Wellington&language=en
+// http://api.weatherstack.com/current?access_key=API_KEY&query=Wellington&language=en
 /*
 * http://api.weatherstack.com/current
     ? access_key = YOUR_ACCESS_KEY
@@ -24,6 +25,7 @@ const val API_KEY = "76bea1f433a42ebbd7f8ca32a9336618"
     & language = en
     & callback = MY_CALLBACK
 * */
+
 
 interface WeatherApiService {
 
