@@ -1,9 +1,7 @@
 package com.paolomanlunas.forecaster.data
 
-import android.provider.Settings.Global.getString
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.paolomanlunas.forecaster.BuildConfig
-import com.paolomanlunas.forecaster.R
 import com.paolomanlunas.forecaster.data.response.CurrentWeatherResponse
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
