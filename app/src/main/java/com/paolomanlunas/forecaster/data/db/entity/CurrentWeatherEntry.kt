@@ -1,22 +1,15 @@
-package com.paolomanlunas.forecaster.data.response
+package com.paolomanlunas.forecaster.data.db.entity
 
 
 import com.google.gson.annotations.SerializedName
 
 data class CurrentWeatherEntry(
-    val cloudcover: Int,
-    val feelslike: Int,
-    val humidity: Int,
+    val temperature: Double,
+    val feelslike: Double,
     @SerializedName("is_day")
     val isDay: String,
-    @SerializedName("observation_time")
-    val observationTime: String,
-    val precip: Int,
-    val pressure: Int,
-    val temperature: Int,
-    @SerializedName("uv_index")
-    val uvIndex: Int,
-    val visibility: Int,
+    val precip: Double,
+    val visibility: Double,
     @SerializedName("weather_code")
     val weatherCode: Int,
     @SerializedName("weather_descriptions")
@@ -28,5 +21,5 @@ data class CurrentWeatherEntry(
     @SerializedName("wind_dir")
     val windDir: String,
     @SerializedName("wind_speed")
-    val windSpeed: Int
+    val windSpeed: Double
 )
