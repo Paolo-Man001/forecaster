@@ -1,4 +1,4 @@
-package com.paolomanlunas.forecaster.data.response
+package com.paolomanlunas.forecaster.data.db.entity
 
 
 import com.google.gson.annotations.SerializedName
