@@ -2,14 +2,14 @@ package com.paolomanlunas.forecaster.data.db.entity
 
 import androidx.room.TypeConverter
 
-class weatherDescConverter {
+class WeatherIconConverter {
    @TypeConverter
-   fun fromWeatherDescList(value: String):List<String>{
+   fun fromWeatherIconList(value: String):List<String>{
       return  value.split(",").map { it }
    }
 
    @TypeConverter
-   fun toWeatherDescString(value: List<String>): String {
+   fun toWeatherIconString(value: List<String>): String {
       return value.joinToString(separator = ",")
    }
 }
