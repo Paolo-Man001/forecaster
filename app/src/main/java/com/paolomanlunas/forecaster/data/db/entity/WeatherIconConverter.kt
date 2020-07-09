@@ -2,7 +2,7 @@ package com.paolomanlunas.forecaster.data.db.entity
 
 import androidx.room.TypeConverter
 
-class weatherIconConverter {
+class WeatherIconConverter {
    @TypeConverter
    fun fromWeatherIconList(value: String):List<String>{
       return  value.split(",").map { it }
