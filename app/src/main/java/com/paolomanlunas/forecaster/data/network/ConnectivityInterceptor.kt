@@ -1,4 +1,4 @@
-package com.paolomanlunas.forecaster.data.network.response
+package com.paolomanlunas.forecaster.data.network
 
 /* ConnectivityInterceptor
 *  - type of Interceptor that checks if there is a network connection.
