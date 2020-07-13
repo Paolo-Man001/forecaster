@@ -10,7 +10,7 @@ class WeatherNetworkDataSourceImpl (
    private val weatherApiService: WeatherApiService
 ): WeatherNetworkDataSource {
    private val _downloadedCurrentWeather = MutableLiveData<CurrentWeatherResponse>()
-   override val downloadCurrentWeather: LiveData<CurrentWeatherResponse>
+   override val downloadedCurrentWeather: LiveData<CurrentWeatherResponse>
       get() = _downloadedCurrentWeather
 
    override suspend fun fetchCurrentWeather(location: String) {
