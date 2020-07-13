@@ -1,8 +1,7 @@
-package com.paolomanlunas.forecaster.data
+package com.paolomanlunas.forecaster.data.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.paolomanlunas.forecaster.BuildConfig
-import com.paolomanlunas.forecaster.data.network.ConnectivityInterceptor
 import com.paolomanlunas.forecaster.data.network.response.CurrentWeatherResponse
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
@@ -43,7 +42,9 @@ interface WeatherApiService {
             val url = chain.request()
                .url()
                .newBuilder()
-               .addQueryParameter("access_key", API_KEY)
+               .addQueryParameter("access_key",
+                  API_KEY
+               )
                .build()
             val request = chain.request()
                .newBuilder()
