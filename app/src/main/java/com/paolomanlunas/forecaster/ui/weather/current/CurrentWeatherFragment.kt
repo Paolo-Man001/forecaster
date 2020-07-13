@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.paolomanlunas.forecaster.R
-import com.paolomanlunas.forecaster.data.WeatherApiService
+import com.paolomanlunas.forecaster.data.network.WeatherApiService
 import kotlinx.android.synthetic.main.current_weather_fragment.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -33,7 +33,6 @@ class CurrentWeatherFragment : Fragment() {
       super.onActivityCreated(savedInstanceState)
       viewModel = ViewModelProvider(this).get(CurrentWeatherViewModel::class.java)
       // TODO: Use the ViewModel
-
 
       // DEMO ONLY
       val apiService = WeatherApiService()
