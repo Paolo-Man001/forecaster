@@ -43,8 +43,6 @@ class CurrentWeatherFragment : Fragment() {
       // Observe the property in weatherNetworkDataSource
       weatherNetworkDataSource.downloadedCurrentWeather.observe(viewLifecycleOwner, Observer {
          textView.text = it.toString()                                  // currentWeatherResponse Object
-//         textView.text = it.currentWeatherEntry.weatherDescriptions[0]  // Weather Desc. Only
-//         textView.text = it.currentWeatherEntry.toString()              // currentWeatherEntry Object Only
       })
 
       GlobalScope.launch(Dispatchers.Main) {
