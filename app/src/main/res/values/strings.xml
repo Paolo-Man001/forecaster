@@ -1,5 +1,5 @@
 <resources>
-   <string name="app_name">Forecaster</string>
+    <string name="app_name">Forecaster</string>
     <string name="menu_item_today">Today</string>
     <string name="menu_item_7_days">7 Days</string>
     <string name="menu_item_settings">Settings</string>
